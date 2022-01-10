@@ -4,15 +4,6 @@
     box-sizing: border-box;
   }
 
-.headContainer {
-    min-width: 100%;
-    margin: auto;
-    padding: 3%;    
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-}
-
 .brand .logo {
     width: 120px;
   }

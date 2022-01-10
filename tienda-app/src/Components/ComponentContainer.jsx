@@ -1,15 +1,15 @@
 
-import Appnavbar from "./Navbar"
+import Appnavbar from "./Appnavbar"
 
   
 export default function ComponentContainer () {
 
     return (
-        <div>
+        
 
             <Appnavbar/>
       
-        </div>
+        
     )
 }
 
