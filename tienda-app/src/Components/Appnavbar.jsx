@@ -1,10 +1,16 @@
-import { Navbar, Container, Nav, NavDropdown } from 'react-bootstrap';
+import { Navbar, Container, Nav, NavDropdown, Form, FormControl, Button } from 'react-bootstrap';
 import Brand from './Brand';
 export default function Appnavbar () { 
 
     return (
         
         <div>
+                    <head>
+	
+                        <title>Grocery on React with shopping cart</title>
+                        <link href="styles.css" rel="stylesheet"/>
+
+                    </head>
                     <Navbar bg="light" expand="lg">
                         <Container>
                             <Navbar.Brand href="#home">
@@ -23,16 +29,20 @@ export default function Appnavbar () {
                                 <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item>
                                 </NavDropdown>
                             </Nav>
+                                <Form className="d-flex">
+                                    <FormControl
+                                    type="search"
+                                    placeholder="Search"
+                                    className="me-2"
+                                    aria-label="Search"
+                                    />
+                                    <Button variant="outline-success">Search</Button>
+                                </Form>
                             </Navbar.Collapse>
                         </Container>
                     </Navbar> 
 
-            <head>
-	
-	            <title>Grocery on React with shopping cart</title>
-                <link href="styles.css" rel="stylesheet"/>
 
-            </head>
 
 
                           
