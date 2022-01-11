@@ -6,9 +6,9 @@ export default function ComponentContainer () {
 
     return (
         
-
+        
             <Appnavbar/>
-      
+        
         
     )
 }

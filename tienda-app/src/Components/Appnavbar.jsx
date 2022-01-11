@@ -4,9 +4,9 @@ export default function Appnavbar () {
 
     return (
         
-        <div>
+        <div className='headerWrapper'>
                     <head>
-	
+    
                         <title>Grocery on React with shopping cart</title>
                         <link href="styles.css" rel="stylesheet"/>
 
@@ -41,15 +41,6 @@ export default function Appnavbar () {
                             </Navbar.Collapse>
                         </Container>
                     </Navbar> 
-
-
-
-
-                          
-                    
-
-      
-            
 
                 <div className="cart">
                     <p>Buy!</p>
