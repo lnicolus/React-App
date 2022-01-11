@@ -1,4 +1,4 @@
-import { Navbar, Container, Nav, NavDropdown, Form, FormControl, Button } from 'react-bootstrap';
+import { Navbar, Container, Nav, NavDropdown, Form, FormControl, Button, DropdownButton } from 'react-bootstrap';
 import Brand from './Brand';
 export default function Appnavbar () { 
 
@@ -11,22 +11,22 @@ export default function Appnavbar () {
                         <link href="styles.css" rel="stylesheet"/>
 
                     </head>
-                    <Navbar bg="light" expand="lg">
+                    <Navbar bg="success" expand="lg">
                         <Container>
                             <Navbar.Brand href="#home">
                                 <Brand/>
                             </Navbar.Brand>
-                            <Navbar.Toggle aria-controls="basic-navbar-nav" />
+                            <Navbar.Toggle aria-controls="basic-navbar-nav"/>
                             <Navbar.Collapse id="basic-navbar-nav">
                             <Nav className="me-auto">
-                                <Nav.Link href="#home">Home</Nav.Link>
-                                <Nav.Link href="#link">Link</Nav.Link>
-                                <NavDropdown title="Dropdown" id="basic-nav-dropdown">
-                                <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-                                <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
-                                <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
+                                <Nav.Link href="#home" className='text-light'>Home</Nav.Link   >
+                                <Nav.Link href="#link" className='text-light'>Link</Nav.Link>
+                                <NavDropdown title="Dropdown" id="basic-nav-dropdown" className='bg-success'>
+                                <NavDropdown.Item href="#action/3.1" className='text-black'>Action</NavDropdown.Item>
+                                <NavDropdown.Item href="#action/3.2" className='text-black'>Another action</NavDropdown.Item>
+                                <NavDropdown.Item href="#action/3.3" className='text-black'>Something</NavDropdown.Item>
                                 <NavDropdown.Divider />
-                                <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item>
+                                <NavDropdown.Item href="#action/3.4" className='text-black'>Separated link</NavDropdown.Item>
                                 </NavDropdown>
                             </Nav>
                                 <Form className="d-flex">
@@ -36,7 +36,7 @@ export default function Appnavbar () {
                                     className="me-2"
                                     aria-label="Search"
                                     />
-                                    <Button variant="outline-success">Search</Button>
+                                    <Button variant="dark">Search</Button>
                                 </Form>
                             </Navbar.Collapse>
                         </Container>

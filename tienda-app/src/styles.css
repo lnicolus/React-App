@@ -1,5 +1,4 @@
-* {
-    margin: auto;
+* {    
     padding: 0;
     box-sizing: border-box;
   }
@@ -11,6 +10,8 @@
     max-width: 30%;
     min-width: 30%;    
     flex-direction: column; 
+    margin-left: 30%;
+    
 }
 
 .brand, .cart {
@@ -23,7 +24,7 @@
 
 .logo {
     background-color: black;
-    border-radius: 50%;
+    border-radius: 50%;    
 }
 
 
@@ -53,7 +54,13 @@
 
 .headerWrapper {
     display: flex;
-    flex-direction: row;
+    flex-direction: row;    
 }
+
+#basic-nav-dropdown{
+    color: ivory;
+}
+
+
 
   
