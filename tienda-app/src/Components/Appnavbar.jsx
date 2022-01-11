@@ -1,5 +1,6 @@
 import { Navbar, Container, Nav, NavDropdown, Form, FormControl, Button, DropdownButton } from 'react-bootstrap';
 import Brand from './Brand';
+import CartWidget from './CartWidget';
 export default function Appnavbar () { 
 
     return (
@@ -39,27 +40,9 @@ export default function Appnavbar () {
                                     <Button variant="dark">Search</Button>
                                 </Form>
                             </Navbar.Collapse>
+                            <CartWidget/>
                         </Container>
-                    </Navbar> 
-
-                <div className="cart">
-                    <p>Buy!</p>
-                    <a                   
-                    href="#"                 
-                    >
-                    <img
-                    className="cartImg"
-                    src="https://cdn1.iconfinder.com/data/icons/food-delivery-44/64/Grocery-bag-vegetable-shop-store-food-delivery-256.png"                    
-                    alt="buy" 
-                    />
-                    </a>
-                    <ul className="shoppingStatusDisplay">
-                        <li>Products: </li>
-                        <li>Subtotal: </li>
-                    </ul>
-      
-                </div>
-            
+                    </Navbar>             
  
     </div>
     )

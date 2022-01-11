@@ -6,8 +6,10 @@ export default function ComponentContainer () {
 
     return (
         
-        
+        <div>
             <Appnavbar/>
+            <ItemListContainer/>
+        </div>   
         
         
     )
