@@ -4,6 +4,8 @@
 node_modules/
 /.pnp
 .pnp.js
+package.json
+package-lock.json
 
 # testing
 /coverage
@@ -21,3 +23,5 @@ node_modules/
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+Coder House React.code-workspace
