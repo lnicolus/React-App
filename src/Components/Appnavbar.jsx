@@ -13,12 +13,6 @@ export default function Appnavbar () {
     return (
         
         <div className='headerWrapper'>
-                    <head>
-    
-                        <title>Grocery on React with shopping cart</title>
-                        <link href="styles.css" rel="stylesheet"/>
-
-                    </head>
                     <Navbar bg="success" expand="lg">
                         <Container>
                             <Navbar.Brand href="#home">

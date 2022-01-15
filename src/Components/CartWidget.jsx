@@ -1,7 +1,7 @@
 export default function CartWidget () { 
 
     return (
-                <div className="cart">
+            <div className="cart">
                 <p className='text-light'>Buy!</p>
                 <a                   
                 href="#"                 

@@ -7,10 +7,10 @@ export default function ComponentContainer () {
 
     return (
         
-        <div>
+        <>
             <Appnavbar/>
-            <ItemListContainer/>
-        </div>   
+            <ItemListContainer greetings='Welcome to our Coder Store!'/>
+        </>   
         
         
     )
