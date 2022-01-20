@@ -15,8 +15,8 @@ const ItemListContainer = ( {greetings} ) => {
                 <li>Broccoli</li>
                 <li>Apples</li>
                 <li>Oranges</li>
-            </ul>     
-        
+            </ul>    
+            
         </>
     )
 }
