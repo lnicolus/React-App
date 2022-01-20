@@ -22,8 +22,8 @@ function ItemCount ({initial, stock, onAdd}) {
         onAdd(contador)
     }
 
-    function onAdd(cant) {
-        console.log(cant)
+    function onAdd(contador) {
+        console.log(contador)
     } // esto va en el useEffect
 
     return (
