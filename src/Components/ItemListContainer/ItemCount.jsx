@@ -1,37 +1,36 @@
 import { useState } from 'react';
 import React from 'react'
+import './stylesItemCount.css';
 
 function ItemCount ({initial, stock, onAdd}) {
 
-    const [contador, setcontador] = useState(initial);
+    const [count, setcount] = useState(initial);
 
     const handleIncrease = ()=> {
-        if(contador < stock) {
-            setcontador(contador + 1)
+        if(count < stock) {
+            setcount(count + 1)
         }
         
     }
 
     const handleDecrease = ()=> {
-        if(contador > initial) {
-            setcontador(contador - 1)
+        if(count > initial) {
+            setcount(count - 1)
         }
     }
 
     const addToCart = ()=> {
-        onAdd(contador)
-    }
-
-    function onAdd(contador) {
-        console.log(contador)
-    } // esto va en el useEffect
+        onAdd(count)
+       }    
 
     return (
-        <div className='container w-50'>
-        <button className='btn btn-outline-primary' onClick={handleIncrease}> + </button>
-        {contador}
-        <button className='btn btn-outline-primary' onClick={handleDecrease}> - </button> 
-        <button className='btn btn-outline-primary btn-block' onClick={addToCart}> Add to Cart </button>
+        <div className='countExercise'>
+            <div className='buttonContainer'>
+                <button className='btn btn-outline-success bg-success text-light' onClick={handleIncrease}> + </button>
+                {count}
+                <button className='btn btn-outline-success bg-success text-light' onClick={handleDecrease}> - </button> 
+                <button className='btn btn-outline-success btn-block bg-success text-light' onClick={addToCart}> Add to Cart </button>
+            </div>
         </div>
     )
 }

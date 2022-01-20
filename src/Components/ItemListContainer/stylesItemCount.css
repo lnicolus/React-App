@@ -1,0 +1,15 @@
+.countExercise{
+    display: flex;
+    flex-direction: row;
+    padding: 2%;    
+    flex-wrap: nowrap;
+}
+
+.buttonContainer{
+    margin: auto;
+    width: 20%;
+}
+
+button {
+    margin: 2%;
+}
