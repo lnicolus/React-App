@@ -6,7 +6,7 @@ import './stylesItemListContainer.css'
 import LoadingAnimation from '../LoadingAnimation/LoadingAnimation'
 
 const ItemListContainer = ( {greetings} ) => { 
-
+    /* A greeting by props, at Coder request */
     ItemListContainer.propTypes = {
     greetings: PropTypes.string.isRequired        
     }
@@ -18,14 +18,14 @@ const ItemListContainer = ( {greetings} ) => {
     useEffect(() => {    
 
         getFetch
-        .then(res => setProducts(res))
+        .then(res => setProducts(res))     /* Ensures products are renderized just once */
         .catch(err => console.log(err))        
-        .finally(()=> setloading(false))  
+        .finally(()=> setloading(false))  /* along with the upper prop 'loading' mocks a server delay of 3 seconds */
              
     }, [])
 
     function onAdd(count) {
-        console.log(count)
+        console.log(count)          /* for the Item Count at Coder Request */
     }
 
     return (
@@ -35,31 +35,32 @@ const ItemListContainer = ( {greetings} ) => {
                 <p>{ greetings }</p> 
                 </div>
                 <div className='storeContainer'>
+                    {/* It will show a loading animation when there is a server delay */}
                     { loading ? <LoadingAnimation/> :
                                         products.map( prod => <div 
-                                            key={prod.id}
-                                            className='col-md-4'
+                                            key={prod.id}                                            
                                             >                        
-                                            <div className="card w-100 mt-5" >
-                                                <div className="card-header bg-success text-light">
-                                                    {`${prod.name} - ${prod.category}`}
+                                            <div className="card w-100 mt-5 itemFlex" >
+                                                <div className="card-header bg-success text-light text-center">
+                                                    {`${prod.name} - ${prod.category} - price $${prod.price}`}
                                                 </div>
                                                 <div className="card-body">
-                                                    <img src={prod.pic} alt='grocery product pic' className='w-50' />
-                                                    {prod.price}                                                            
+                                                    <img src={prod.pic} alt='grocery product pic'/>                                                                                                              
                                                 </div>
-                                                <div className="card-footer">
+                                                <div className="cardFooter">
                                                     <button className="btn btn-outline-success btn-block bg-success text-light">
                                                         Buy
                                                     </button>                                                              
                                                 </div>
-                                            </div>
-                                        </div>                                    
+                                            </div>                                            
+                                        </div>                                                                         
                 
-                    ) } 
+                    ) }
+                        
                 </div>
-
-                <ItemCount initial={1} stock={10} onAdd={onAdd} />    
+                {/* It will show an empty fragment when there is a server delay */}
+                { loading ? <></> : <ItemCount initial={1} stock={10} onAdd={onAdd}/> }
+                
      </>  
         
     )

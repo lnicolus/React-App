@@ -6,10 +6,24 @@
 }
 
 .buttonContainer{
-    margin: auto;
+    
     width: 20%;
 }
 
 button {
     margin: 2%;
+}
+
+.itemFlex{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;    
+}
+
+.cardFooter, .buttonContainer, .card-body img, .card-footer button  {
+    margin: auto;
+}
+
+.cardFooter {
+    padding: 0.5rem 1rem;
 }

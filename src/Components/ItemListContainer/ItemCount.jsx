@@ -2,6 +2,8 @@ import { useState } from 'react';
 import React from 'react'
 import './stylesItemCount.css';
 
+/* Simulates counting bougth items, its very very green (no pun intended) */
+
 function ItemCount ({initial, stock, onAdd}) {
 
     const [count, setcount] = useState(initial);
