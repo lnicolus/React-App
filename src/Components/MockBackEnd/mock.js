@@ -18,7 +18,7 @@
         setTimeout(()=>{
             //Acciones que quiero que se resuelvan
             res(products)        
-        }, 2000)
+        }, 5000)
     }else{
         rej('404 not found')
     }

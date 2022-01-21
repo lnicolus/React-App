@@ -3,7 +3,7 @@ import { useEffect, useState } from "react"
 import { getFetch } from "../MockBackEnd/mock"
 import ItemCount from "./ItemCount"
 import './stylesItemListContainer.css'
-import '../LoadingAnimation/LoadingAnimation'
+import LoadingAnimation from '../LoadingAnimation/LoadingAnimation'
 
 const ItemListContainer = ( {greetings} ) => { 
 
