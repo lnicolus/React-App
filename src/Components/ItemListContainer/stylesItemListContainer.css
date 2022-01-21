@@ -1,0 +1,20 @@
+.storeContainer{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    max-width: 85%;
+    margin: auto;
+}
+
+.itemListWrapper{
+    max-width: 85%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    align-items: center;
+}
