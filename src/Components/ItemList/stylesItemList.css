@@ -1,17 +1,12 @@
-.countExercise{
+.storeContainer{
     display: flex;
     flex-direction: row;
-    padding: 2%;    
-    flex-wrap: nowrap;
-}
-
-.buttonContainer{
-    
-    width: 20%;
-}
-
-button {
-    margin: 2%;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    max-width: 85%;
+    margin: auto;
 }
 
 .itemFlex{
@@ -27,3 +22,4 @@ button {
 .cardFooter {
     padding: 0.5rem 1rem;
 }
+
