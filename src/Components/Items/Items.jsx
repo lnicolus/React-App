@@ -1,7 +1,8 @@
 import React from 'react';
-import ItemList from '../ItemList/ItemList';
 
-const Items = ()=> { 
+
+const Items = ({prod})=> { 
+
 
   return (
    
