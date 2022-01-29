@@ -1,5 +1,6 @@
 import React from 'react';
 import './stylesLoadingAnimation.css';
+/* The animation belongs to Jack Rugile at https://codepen.io/jackrugile/pen/JddmaX my thanks to him */
 
 function LoadingAnimation () {
   return (

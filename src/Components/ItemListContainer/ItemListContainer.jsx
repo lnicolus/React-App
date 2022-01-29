@@ -6,6 +6,7 @@ import { getProducts } from "../helpers/mock";
 import ItemCount from "../ItemCount/ItemCount";
 import LoadingAnimation from "../LoadingAnimation/LoadingAnimation";
 import ItemList from "../ItemList/ItemList";
+import ItemDetailContainer from "../ItemDetailContainer/ItemDetailContainer";
 
 const ItemListContainer = ({ greetings }) => {
   const [loading, setloading] = useState(true);
@@ -18,7 +19,7 @@ const ItemListContainer = ({ greetings }) => {
       ) /* Ensures products are renderized just once */
       .catch((err) => console.log(err))
       .finally(() =>
-        setloading(false)
+      setloading(false)
       ); /* along with the upper prop 'loading' mocks a server delay of 3 seconds */
   }, [products]); /* So that it detects any change in the filters */
 
@@ -47,7 +48,8 @@ const ItemListContainer = ({ greetings }) => {
         )}
         {/* It will show an empty fragment when there is a server delay */}
         </div>
-        {loading ? <></> : <ItemCount initial={1} stock={10} onAdd={onAdd} />}      
+        {loading ? <></> : <ItemCount initial={1} stock={10} onAdd={onAdd} />}   
+        <ItemDetailContainer products={products}/> 
     </>
   );
 };

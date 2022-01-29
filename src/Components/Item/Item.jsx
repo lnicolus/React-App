@@ -1,7 +1,7 @@
 import React from 'react';
 
 
-const Items = ({prod})=> { 
+const Item = ({prod})=> { 
 
 
   return (
@@ -18,8 +18,7 @@ const Items = ({prod})=> {
                   
                     <button className="btn btn-outline-success btn-block bg-success text-light">
                       Buy
-                    </button>
-                  
+                    </button>                  
                 </div>
               </div>
     </div>
@@ -28,4 +27,4 @@ const Items = ({prod})=> {
 };
 
 
-export default Items
+export default Item
