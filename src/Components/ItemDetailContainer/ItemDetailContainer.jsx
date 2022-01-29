@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react';
-import { getProducts } from '../helpers/mock';
-import ItemDetail from '../ItemDetail/ItemDetail';
+import React, { useState, useEffect } from "react";
+import { getProducts } from "../helpers/mock";
+import ItemDetail from "../ItemDetail/ItemDetail";
 
 const ItemDetailContainer = () => {
   const [product, setProduct] = useState({});
