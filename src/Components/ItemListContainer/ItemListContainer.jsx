@@ -6,6 +6,7 @@ import { getProducts } from "../helpers/mock";
 import ItemCount from "../ItemCount/ItemCount";
 import LoadingAnimation from "../LoadingAnimation/LoadingAnimation";
 import ItemList from "../ItemList/ItemList";
+import ItemDetailContainer from "../ItemDetailContainer/ItemDetailContainer";
 
 const ItemListContainer = ({ greetings }) => {
   const [loading, setloading] = useState(true);
@@ -43,11 +44,16 @@ const ItemListContainer = ({ greetings }) => {
         {loading ? (
           <LoadingAnimation />
         ) : (
+          <>
           <ItemList products={products}/>
+          <ItemDetailContainer/> 
+          </> 
         )}
         {/* It will show an empty fragment when there is a server delay */}
+         
         </div>
-        {loading ? <></> : <ItemCount initial={1} stock={10} onAdd={onAdd} />}      
+        {loading ? <></> : <ItemCount initial={1} stock={10} onAdd={onAdd} />}   
+        
     </>
   );
 };
