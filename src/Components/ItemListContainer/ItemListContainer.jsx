@@ -31,8 +31,6 @@ const ItemListContainer = ({ greetings }) => {
     greetings: PropTypes.string.isRequired,
   };
 
-
-
   return (
     <>
       <div className="itemListWrapper">
@@ -49,7 +47,7 @@ const ItemListContainer = ({ greetings }) => {
         {/* It will show an empty fragment when there is a server delay */}
         </div>
         {loading ? <></> : <ItemCount initial={1} stock={10} onAdd={onAdd} />}   
-        <ItemDetailContainer/>  
+        <ItemDetailContainer products={products}/>  
     </>
   );
 };

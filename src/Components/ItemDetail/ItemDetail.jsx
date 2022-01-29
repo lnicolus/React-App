@@ -2,6 +2,7 @@ import React from 'react';
 
 const ItemDetail = (props) => {
   const { name, category, stock, price } = props.products;
+  console.log(props);
 
   return (
     <>
