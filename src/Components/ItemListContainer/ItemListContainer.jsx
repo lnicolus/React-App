@@ -47,12 +47,13 @@ const ItemListContainer = ({ greetings }) => {
           <>
           <ItemList products={products}/>
           <ItemDetailContainer/> 
+          <ItemCount initial={1} stock={10} onAdd={onAdd}/>  
           </> 
         )}
         {/* It will show an empty fragment when there is a server delay */}
          
         </div>
-        {loading ? <></> : <ItemCount initial={1} stock={10} onAdd={onAdd} />}   
+         
         
     </>
   );
