@@ -2,7 +2,7 @@ import React from "react";
 export default function CartWidget() {
   return (
     <div className="cart">
-      <p className="text-light navText">Buy!</p>
+      <p className="text-light navText">Your Cart</p>
       
         <img
           className="cartImg"
