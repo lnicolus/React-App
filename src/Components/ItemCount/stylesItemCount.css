@@ -1,15 +1,14 @@
-.countExercise{
-    display: flex;
-    flex-direction: row;
-    padding: 2%;    
-    flex-wrap: nowrap;
+.countExercise {
+  display: flex;
+  flex-direction: row;
+  padding: 2%;
+  flex-wrap: nowrap;
 }
 
-.buttonContainer{
-
-    width: 20%;
+.buttonContainer {
+  width: 20%;
 }
 
 button {
-    margin: 2%;
+  margin: 2%;
 }

@@ -1,5 +1,5 @@
 import React from "react";
-import Items from "../Items/Items";
+import Item from "../Item/Item";
 import "./stylesItemList.css";
 
 
@@ -9,7 +9,7 @@ const ItemList = ({products}) => {
   return (
     <>
       
-      {products.map((prod) => <Items prod={prod} />)}
+      {products.map((prod) => <Item prod={prod} />)}
       
     </>
   );

@@ -1,4 +1,33 @@
 a {
-    text-decoration: none;  
-  }
+  text-decoration: none;
+}
 
+.headerWrapper {
+  display: flex;
+  flex-direction: row;
+}
+
+#basic-nav-dropdown {
+  color: ivory;
+}
+
+.navbar {
+  min-width: 100%;
+}
+
+.navText {
+  padding: 5%;
+}
+
+.brand,
+.cart {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+.me-auto {
+  margin-left: 5%;
+}
