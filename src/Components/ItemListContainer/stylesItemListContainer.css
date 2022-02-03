@@ -1,9 +1,13 @@
-.itemListWrapper{
-    max-width: 85%;
-    margin: auto;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    align-content: center;
-    align-items: center;
+.itemListWrapper {
+  max-width: 85%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: center;
+  align-items: center;
+}
+
+.separator {
+  display: block;
 }

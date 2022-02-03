@@ -1,25 +1,28 @@
-.storeContainer{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-content: center;
-    justify-content: center;
-    align-items: center;
-    max-width: 85%;
-    margin: auto;
+.storeContainer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  max-width: 85%;
+  margin: auto;
 }
 
-.itemFlex{
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;    
+.itemFlex {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: center;
 }
 
-.cardFooter, .buttonContainer, .card-body img, .card-footer button  {
-    margin: auto;
+.cardFooter,
+.buttonContainer,
+.card-body img,
+.card-footer button {
+  margin: auto;
 }
 
 .cardFooter {
-    padding: 0.5rem 1rem;
+  padding: 0.5rem 1rem;
 }
-

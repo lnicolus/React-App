@@ -1,68 +1,42 @@
-* {    
-    padding: 0;
-    box-sizing: border-box;
-  }
-
-.brand .logo {
-    width: 120px;
-  }
-.brand {
-    max-width: 30%;
-    min-width: 30%;    
-    flex-direction: column; 
-    margin-left: 30%;
-    
+* {
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.brand, .cart {
-    flex-grow: 1; 
-    display: flex; 
-    justify-content: center;
-    align-items: center;
-    align-content: center;;
+.brand .logo {
+  width: 120px;
+}
+.brand {
+  max-width: 30%;
+  min-width: 30%;
+  flex-direction: column;
+  margin-left: 30%;
 }
 
 .logo {
-    background-color: black;
-    border-radius: 50%;    
+  background-color: black;
+  border-radius: 50%;
 }
 
-
 .shoppingStatusDisplay {
-    list-style: none;
-    padding: 0px;
+  list-style: none;
+  padding: 0px;
 }
 
 .cart {
-    flex-direction: column;
-    max-width: 30%;
-} 
+  flex-direction: column;
+  max-width: 30%;
+  margin-left: 50%;
+}
 
 .cartImg {
-    max-width: 50px;
-    max-height: 50px;
-    background-color: ivory;
-    border-radius: 50%;
+  max-width: 50px;
+  max-height: 50px;
+  background-color: ivory;
+  border-radius: 50%;
 }
 
-.navbar {
-    min-width: 100%;
-}
-  
 .form-inline {
-    display: flex;
-    flex-direction: row;
+  display: flex;
+  flex-direction: row;
 }
-
-.headerWrapper {
-    display: flex;
-    flex-direction: row;     
-}
-
-#basic-nav-dropdown{
-    color: ivory;
-}
-
-
-
-  
