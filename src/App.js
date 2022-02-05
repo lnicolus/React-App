@@ -6,6 +6,7 @@ import Appnavbar from "./Components/Appnavbar/Appnavbar.jsx";
 import ItemListContainer from "./Components/ItemListContainer/ItemListContainer.jsx";
 import Cart from "../src/Components/Cart/Cart.jsx"
 import ItemDetailContainer from "../src/Components/ItemDetailContainer/ItemDetailContainer.jsx"
+import { PageNotFound } from "./helpers/PageNotFound";
 
 export default function App() {
   return (
@@ -30,6 +31,7 @@ export default function App() {
         exact 
         path="/cart" 
         element={<Cart />} />
+        <Route path="*" element={< PageNotFound />} />
       </Routes>
     </BrowserRouter>
   );
