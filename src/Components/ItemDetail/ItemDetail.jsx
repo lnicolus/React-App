@@ -1,17 +1,23 @@
 import React from 'react';
 import '../ItemList/stylesItemList.css'
-import ItemCount from "../ItemCount/ItemCount";
-import { useState } from 'react';
+import ItemCount from "../ItemCount/ItemCount"
 import { Link } from 'react-router-dom';
+import { useCartContext } from './../../Context/CartContext';
+import { useState } from 'react';
+
 
 const ItemDetail = (props) => {
-  const { name, category, price, pic } = props.product;
+  const { name, category, price, pic, quantity } = props.product; 
+  const [count, setCount ] = useState(0); 
 
-const [count, setCount] = useState(0);
+ const { cartList, agregarAlCarrito } = useCartContext()
 
   function onAdd(count) {
-    setCount(count); 
+    agregarAlCarrito( {...props.product, quantity: count, price: price} ) 
+    setCount(count)
   }
+
+  console.log(cartList)
 
   return (
     <div className='storeContainer'>
@@ -27,7 +33,7 @@ const [count, setCount] = useState(0);
        
           {/* If the count is 0, user can keep buying */}
           {count  === 0 ?
-          <ItemCount initial={1} stock={10} onAdd={onAdd} /> 
+          <ItemCount initial={0} stock={10} onAdd={onAdd} /> 
           :
           <>
           <Link to="/cart">

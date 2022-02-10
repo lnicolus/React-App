@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState, createContext} from "react";
 import "./styles.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -7,25 +7,33 @@ import ItemListContainer from "./Components/ItemListContainer/ItemListContainer.
 import Cart from "../src/Components/Cart/Cart.jsx"
 import ItemDetailContainer from "../src/Components/ItemDetailContainer/ItemDetailContainer.jsx"
 import { PageNotFound } from "./helpers/PageNotFound";
+import { products } from "./helpers/mock"
+import CartContextProvider from "./Context/CartContext";
+
+export const ContextApp = createContext();
 
 export default function App() {
+const [prods, setProds] = useState(products)
+  
   return (
+    <ContextApp.Provider value={{ prods }}>
+    <CartContextProvider>
     <BrowserRouter>
-      <Appnavbar />
+      <Appnavbar/>
       <Routes>
         <Route 
         exact 
         path="/" 
-        element={<ItemListContainer />} />
+        element={<ItemListContainer products ={prods} />} />
         <Route
           exact
           path="/category/:idCategory"
-          element={<ItemListContainer />}
+          element={<ItemListContainer products ={prods} />}
         />
         <Route
           exact
           path="/detail/:idProduct"
-          element={<ItemDetailContainer />}
+          element={<ItemDetailContainer products ={prods} />}
         />
         <Route 
         exact 
@@ -34,5 +42,7 @@ export default function App() {
         <Route path="*" element={< PageNotFound />} />
       </Routes>
     </BrowserRouter>
+    </CartContextProvider>
+    </ContextApp.Provider>
   );
 }

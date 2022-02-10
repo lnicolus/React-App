@@ -37,7 +37,7 @@ const ItemListContainer = () => {
         ) : (
           <>
             <div className="storeContainer">
-              <ItemList products={products} />
+              <ItemList />
             </div>
 
             

@@ -1,15 +1,18 @@
-import React from "react";
+import React, {useContext} from "react";
 import Item from "../Item/Item";
 import "./stylesItemList.css";
+import { ContextApp } from "../../App";
 
 
-const ItemList = ({products}) => {
 
+const ItemList = () => {
+
+  const { prods } = useContext(ContextApp)
 
   return (
     <>
       
-      {products.map((prod) => <Item prod={prod} />)}
+      {prods.map((prod) => <Item prod={prod} />)}
       
     </>
   );

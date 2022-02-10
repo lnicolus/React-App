@@ -1,19 +1,19 @@
-import { useState } from "react";
 import React from "react";
+import { useState } from "react";
 import "./stylesItemCount.css";
 
 function ItemCount({ initial, stock, onAdd }) {
-  const [count, setcount] = useState(initial);
+  const [count, setCount] = useState(initial);
 
   const handleIncrease = () => {
     if (count < stock) {
-      setcount(count + 1);
+      setCount(count + 1);
     }
   };
 
   const handleDecrease = () => {
     if (count > initial) {
-      setcount(count - 1);
+      setCount(count - 1);
     }
   };
 
