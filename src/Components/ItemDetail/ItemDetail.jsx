@@ -8,13 +8,13 @@ import { useState } from 'react';
 
 const ItemDetail = (props) => {
   const { name, category, price, pic, quantity } = props.product; 
-  const [count, setCount ] = useState(0); 
+  const [count, setCount ] = useState(false); 
 
  const { cartList, agregarAlCarrito } = useCartContext()
 
   function onAdd(count) {
     agregarAlCarrito( {...props.product, quantity: count, price: price} ) 
-    setCount(count)
+    setCount(true)
   }
 
   console.log(cartList)
@@ -32,7 +32,7 @@ const ItemDetail = (props) => {
         <div className="cardFooter">         
        
           {/* If the count is 0, user can keep buying */}
-          {count  === 0 ?
+          {!count  ?
           <ItemCount initial={0} stock={10} onAdd={onAdd} /> 
           :
           <>
