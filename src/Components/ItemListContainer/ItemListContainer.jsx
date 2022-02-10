@@ -14,7 +14,7 @@ const ItemListContainer = () => {
 
   /* Through the conditional we enable what content can be seen acording to the UI input */
   useEffect(() => {
-        getProducts
+        getProducts()
         .then((res) =>
           setProducts(idCategory ? res.filter((prod) => prod.category === idCategory) : res)
           )        
