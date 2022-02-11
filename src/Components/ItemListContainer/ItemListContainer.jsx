@@ -11,19 +11,22 @@ const ItemListContainer = () => {
   const [products, setProducts] = useState([]);
   /* we must capture the parameter in the route for it to work and lead us to the 2 categories in the grocery */
   const { idCategory } = useParams();
+  
 
   /* Through the conditional we enable what content can be seen acording to the UI input */
   useEffect(() => {
-        getProducts()
-        .then((res) =>
-          setProducts(idCategory ? res.filter((prod) => prod.category === idCategory) : res)
-          )        
-        .catch((err) => console.log(err))
-        .finally(() =>
-          setloading(false)
-        ); /* along with the upper prop 'loading' mocks a server delay of 3 seconds */
-    
-  }, [idCategory]); /* So that it detects any change in the filters */ 
+    setloading(true)
+    getProducts()
+    .then((res) =>
+      setProducts(idCategory ? res.filter((prod) => prod.category === idCategory) : res)
+      )     
+    .then(console.log(products))   
+    .catch((err) => console.log(err))
+    .finally(() =>
+      setloading(false)
+    ); /* along with the upper prop 'loading' mocks a server delay of 3 seconds */
+
+}, [idCategory]); /* So that it detects any change in the filters */ 
 
   return (
     <>
@@ -37,7 +40,7 @@ const ItemListContainer = () => {
         ) : (
           <>
             <div className="storeContainer">
-              <ItemList />
+              <ItemList products={products} />
             </div>
 
             

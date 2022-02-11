@@ -15,45 +15,52 @@ function CartContextProvider({ children }) {
     const [cartList, setCartList] = useState([]); // carrito vacio
     
     function agregarAlCarrito(item){
+        
 
-        const precioTotal = (item.price * item.quantity);
+        // -1 no existe en el cart list, 0 en adelante si is in cart
+        const index = cartList.findIndex(prod => prod.id === item.id )
+  
+        
 
-        if ( duplicados(item.name)) {
-            const cantidadTotal = [...cartList];
-
-            cantidadTotal.forEach(i => {
-                if (i.name === item.name) {
-                    i.quantity += item.quantity
-                    i.price += precioTotal
-                }
-            })
-            return setCartList (cantidadTotal)
-        }
-        return setCartList([...cartList, {name: item.name, price: precioTotal, quantity: item.quantity}])
-    }
-
-    const duplicados = (seleccion) => {
-        const find = cartList.find( (i) =>{
-            return i.name === seleccion
-        })
-        return find
-    }
+        if (index === -1) {
+            // no existe, lo agrego
+            setCartList( [ ...cartList, item ] )
+            
        
-    function vaciarCarrito() {
-        setCartList([])        
+        } else {
+            // si ya existe
+            const cant = cartList[index].quantity
+            cartList[index].quantity = item.quantity + cant 
+            const newCartList = [ ...cartList ]
+            setCartList(newCartList)  
+        }
+
+    }
+    const sumaTotal = () => {
+        return cartList.reduce((acum, prod) =>  acum= acum + (prod.price * prod.quantity)  ,0)
+    }
+    
+    const cantidad = () => {
+        return cartList.reduce((acum, prod) =>  acum += prod.quantity  ,0)
     }
 
-    const eliminarUno = (item) => {
-		const eliminarItem = [...cartList]
-		const itemEliminado = eliminarItem.filter(x => x.name !== item)		
-		return setCartList(itemEliminado)
-	}
+    const borrarItem = (id) => { 
+        setCartList( cartList.filter( prod => prod.id !== id ) )
+    }
+
+    function vaciarCarrito() {
+        setCartList([])
+        
+    }
+    
     
   return <cartContext.Provider value={{
       cartList,
       agregarAlCarrito,
-      vaciarCarrito,  
-      eliminarUno    
+      vaciarCarrito,
+      sumaTotal,
+      cantidad,
+      borrarItem
   }} >
         {children}
   </cartContext.Provider>;

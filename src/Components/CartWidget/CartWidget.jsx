@@ -4,6 +4,10 @@ import { useCartContext } from "../../Context/CartContext";
 
 export default function CartWidget() {
   
+<<<<<<< HEAD
+=======
+
+>>>>>>> 59da86ffafd3bf61c24b3ede741da51ead6c8984
   const { cantidad, sumaTotal } = useCartContext()
   return (
     <div className="cart">

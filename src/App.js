@@ -24,16 +24,16 @@ const [prods, setProds] = useState(products)
         <Route 
         exact 
         path="/" 
-        element={<ItemListContainer products ={prods} />} />
+        element={<ItemListContainer />} />
         <Route
           exact
           path="/category/:idCategory"
-          element={<ItemListContainer products ={prods} />}
+          element={<ItemListContainer />}
         />
         <Route
           exact
           path="/detail/:idProduct"
-          element={<ItemDetailContainer products ={prods} />}
+          element={<ItemDetailContainer />}
         />
         <Route 
         exact 
