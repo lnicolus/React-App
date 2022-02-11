@@ -10,7 +10,9 @@ import CartWidget from "../CartWidget/CartWidget";
 import { Link } from "react-router-dom";
 import "./stylesAppnavbar.css";
 
+
 export default function Appnavbar() {
+  
   return (
     <div className="headerWrapper">
       <Navbar bg="success" expand="lg">
@@ -41,9 +43,7 @@ export default function Appnavbar() {
             </Form>
           </Navbar.Collapse>
           <Link to="/Cart">
-          <CartWidget> 
-            
-          </CartWidget>
+          <CartWidget/>
           </Link>
         </Container>
       </Navbar>

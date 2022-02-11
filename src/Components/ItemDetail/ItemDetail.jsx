@@ -14,7 +14,8 @@ const ItemDetail = (props) => {
 
   function onAdd(quantity) {
     agregarAlCarrito( {...props.product, quantity: quantity, price} ) 
-    setCount(true)        
+    setCount(true)
+    
   }
 
   
