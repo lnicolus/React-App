@@ -12,12 +12,12 @@ const ItemDetail = (props) => {
 
  const { cartList, agregarAlCarrito } = useCartContext()
 
-  function onAdd(count) {
-    agregarAlCarrito( {...props.product, quantity: count, price: price} ) 
-    setCount(true)
+  function onAdd(quantity) {
+    agregarAlCarrito( {...props.product, quantity: quantity, price} ) 
+    setCount(true)        
   }
 
-  console.log(cartList)
+  
 
   return (
     <div className='storeContainer'>

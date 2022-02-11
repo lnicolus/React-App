@@ -1,5 +1,11 @@
 import React from "react";
+import { useCartContext } from "../../Context/CartContext";
+
+
 export default function CartWidget() {
+  
+
+  const { cantidad, sumaTotal } = useCartContext()
   return (
     <div className="cart">
       <p className="text-light navText">Cart</p>
@@ -11,8 +17,8 @@ export default function CartWidget() {
         />
      
       <ul className="shoppingStatusDisplay">
-        <li className="text-light navText">Products: </li>
-        <li className="text-light navText">Subtotal: </li>
+        <li className="text-light navText">{`Kilograms: ${cantidad()}`}</li>
+        <li className="text-light navText">{`Subtotal: ${sumaTotal()}`}</li>
       </ul>
     </div>
   );
