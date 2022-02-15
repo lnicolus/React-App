@@ -33,7 +33,7 @@ const ItemDetail = (props) => {
        
           {/* If the count is 0, user can keep buying */}
           {!count  ?
-          <ItemCount initial={0} stock={10} onAdd={onAdd} /> 
+          <ItemCount initial={1} stock={10} onAdd={onAdd} /> 
           :
           <>
           <Link to="/cart">

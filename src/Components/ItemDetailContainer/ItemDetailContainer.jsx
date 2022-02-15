@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import { getProducts } from "../../helpers/mock";
+import { getProducts } from "../helpers/mock";
 import ItemDetail from "../ItemDetail/ItemDetail";
 import LoadingAnimation from './../LoadingAnimation/LoadingAnimation';
 

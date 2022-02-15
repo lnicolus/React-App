@@ -6,8 +6,8 @@ import Appnavbar from "./Components/Appnavbar/Appnavbar.jsx";
 import ItemListContainer from "./Components/ItemListContainer/ItemListContainer.jsx";
 import Cart from "../src/Components/Cart/Cart.jsx"
 import ItemDetailContainer from "../src/Components/ItemDetailContainer/ItemDetailContainer.jsx"
-import { PageNotFound } from "./helpers/PageNotFound";
-import { products } from "./helpers/mock"
+import { PageNotFound } from "./Components/PageNotFound/PageNotFound";
+import { products } from "../src/Components/helpers/mock"
 import CartContextProvider from "./Context/CartContext";
 
 export const ContextApp = createContext();

@@ -1,7 +1,7 @@
 import React from "react";
 import "./stylesItemListContainer.css";
 import { useEffect, useState } from "react";
-import { getProducts } from "../../helpers/mock";
+import { getProducts } from "../helpers/mock";
 import LoadingAnimation from "../LoadingAnimation/LoadingAnimation";
 import ItemList from "../ItemList/ItemList";
 import { useParams } from "react-router-dom";
@@ -19,8 +19,7 @@ const ItemListContainer = () => {
     getProducts()
     .then((res) =>
       setProducts(idCategory ? res.filter((prod) => prod.category === idCategory) : res)
-      )     
-    .then(console.log(products))   
+      )
     .catch((err) => console.log(err))
     .finally(() =>
       setloading(false)
