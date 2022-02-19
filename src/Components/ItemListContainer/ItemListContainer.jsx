@@ -47,7 +47,7 @@ const ItemListContainer = () => {
     ); /* along with the upper prop 'loading' mocks a server delay of 3 seconds */
 
 }, [idCategory]); /* So that it detects any change in the filters */ 
-console.log(products, 'hola')
+
   return (
     <>
       <div className="itemListWrapper">
