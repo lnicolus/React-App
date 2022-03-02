@@ -1,9 +1,10 @@
 import React from "react";
-import { useCartContext } from "../../Context/CartContext";
 import { useState } from "react";
 import Form from "../Form/Form";
 import PostPurchase from './PostPurchase';
-import { Link } from "react-router-dom";
+import CartDetail from "../CartDetail/CartDetail";
+import EmptyCart from "./EmptyCart";
+import { useCartContext } from "../../Context/CartContext";
 
 
 /*
@@ -12,74 +13,25 @@ import { Link } from "react-router-dom";
 */
 
 const Cart = () => {
-  const [checkout, falseCheckout] = useState(false);
-  const [orderId, setOrderId] = useState("");
-  const {
-    cartList,
-    clearCart,
-    billTotal,
-    deleteItem,        
-  } = useCartContext();    
 
-  console.log(orderId,'cart')
-
+const [orderId, setOrderId] = useState("");
+const [checkout, falseCheckout] = useState(false);
+const {
+  cartList,      
+} = useCartContext();    
   return (
-    <div>
-      {cartList.length !== 0 ? (
-        <>
-          <div className="itemListWrapper">
-            {cartList.map((produ) => (
-              <div key={produ.id}>
-                <h3>{produ.name}</h3>
-                <p>Price by kg: ${produ.price} </p>
-                <p> Your order: {produ.quantity}Kgs</p>
-
-                <button
-                  className="btn btn-outline-success btn-block bg-success text-light"
-                  onClick={() => deleteItem(produ.id)}
-                >
-                  Erase item
-                </button>
-              </div>
-            ))}
-
-            {`Your total is $${billTotal()}`}
-            <div className="btn-group">
-              <button
-                className="btn btn-outline-success btn-block bg-success text-light"
-                onClick={falseCheckout}
-              >
-                Checkout
-              </button>
-              <button
-                className="btn btn-outline-success btn-block bg-success text-light"
-                onClick={clearCart}
-              >
-                Empty my cart
-              </button>
-               
-            </div>              
-            {checkout ? (
-              <Form setOrderId={setOrderId}  orderId={orderId} />
-            ) : (
-              <>
-                <p>Click checkout to confirm your purchase</p>
-              </>
-            )}
-          </div>
-        </>
-      ) : (
-        <div className="itemListWrapper">
-          <h1>Your cart is empty!</h1>
-          <Link to="/">
-            <img
-              src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Felearningdom.com%2Fwp-content%2Fthemes%2Fmrtailor%2Fimages%2Fempty_cart.png&f=1&nofb=1"
-              alt="sad cart noises"
-            />
-          </Link>             
-                        
-        </div>        
-      )}
+    <div className="itemListWrapper">
+      <CartDetail falseCheckout={falseCheckout}  />
+   
+            <>          
+            {checkout && cartList.length > 0 &&  <Form setOrderId={setOrderId}  orderId={orderId} /> }        
+            </>        
+       
+              
+      <EmptyCart/>
+      
+      <PostPurchase orderId={orderId}/>
+      
     </div>
   );
 };

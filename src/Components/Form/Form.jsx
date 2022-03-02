@@ -10,8 +10,7 @@ import {
     getDocs,
   } from "firebase/firestore";
   import { useState } from "react";
-  import { useCartContext } from "../../Context/CartContext";  
-  import PostPurchase from './../Cart/PostPurchase';
+  import { useCartContext } from "../../Context/CartContext"; 
 
   /*
   The form updates accordingly to the events inputted by the user, however, it does several validation checks to avoid problems in the buying process.
@@ -20,8 +19,8 @@ import {
   10 digits as we use in Buenos Aires. 
   */
 
-  const Form = ({setOrderId, orderId}) => {    
-   const { cartList } = useCartContext();
+  const Form = ({setOrderId}) => {    
+   const { cartList, clearCart } = useCartContext();
     
     const handleChange = (event) => {
       setDataForm({
@@ -44,7 +43,7 @@ import {
   
       if (dataForm.email !== dataForm.validateEmail) {
         alertDisplay("Mail wrongly validated, get your eyes checked");
-      } else if (nameValidation.includes(1, 2, 3, 4, 5, 6, 7, 8, 9, 0)) {
+      } else if (nameValidation.includes(1, 2, 3, 4, 5, 6, 7, 8, 9, 0)) { // how to validate a string does not contain numbers
         alertDisplay("Are you a robot? we do not accept numbers in name");
       } else if (dataForm.phone < 1000000000 || dataForm.phone > 9999999999) {
         alertDisplay("Invalid phone number");
@@ -119,22 +118,19 @@ import {
             })
           );
         batch.commit();
-        //clearCart(); 
+        clearCart(); 
       }
     };
 
     const [dataForm, setDataForm] = useState({
-      email: "",
-      phone: "",
-      name: "",
-      validateEmail: "",
+      email: "fff@gfgg",
+      phone: "1234567890",
+      name: "Lucas",
+      validateEmail: "fff@gfgg",
     }); 
   
 return (
   <>
-{orderId !== ""  ?   
-
-(<PostPurchase orderId={orderId} /> ) : ( 
 
 <form className="itemListWrapper" onSubmit={buy}>
 <input
@@ -178,7 +174,6 @@ return (
 <p className="alert" id="alerts"></p>
 </form>
 
-)}
 
 </>
 )
