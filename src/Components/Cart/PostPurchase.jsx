@@ -3,11 +3,13 @@ import { useCartContext } from "../../Context/CartContext";
 
 
 export default function PostPurchase({ orderId }) {
+
     const { clearCart } = useCartContext();    
     console.log(orderId, 'post purchase')
+
     return (          
         <>
-        {orderId  !== undefined &&  
+        {orderId  !== "" &&  
         <>    
         <p className='alert alert-success' onChange={(e) => orderId(e.target.value)}>Purchase successful. Your purchase identification is : {orderId} </p> 
         <button

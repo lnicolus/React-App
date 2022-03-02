@@ -19,11 +19,10 @@ const Cart = () => {
     clearCart,
     billTotal,
     deleteItem,        
-  } = useCartContext();  
-  
-  
+  } = useCartContext();    
 
   console.log(orderId,'cart')
+
   return (
     <div>
       {cartList.length !== 0 ? (
@@ -58,10 +57,10 @@ const Cart = () => {
               >
                 Empty my cart
               </button>
-              <PostPurchase orderId={orderId} />  
+               
             </div>              
             {checkout ? (
-              <Form setOrderId={setOrderId} />
+              <Form setOrderId={setOrderId}  orderId={orderId} />
             ) : (
               <>
                 <p>Click checkout to confirm your purchase</p>
@@ -77,8 +76,8 @@ const Cart = () => {
               src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Felearningdom.com%2Fwp-content%2Fthemes%2Fmrtailor%2Fimages%2Fempty_cart.png&f=1&nofb=1"
               alt="sad cart noises"
             />
-          </Link>   
-          <PostPurchase orderId={orderId} />               
+          </Link>             
+                        
         </div>        
       )}
     </div>

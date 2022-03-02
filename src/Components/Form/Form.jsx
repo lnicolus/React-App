@@ -13,7 +13,6 @@ import {
   import { useCartContext } from "../../Context/CartContext";  
   import PostPurchase from './../Cart/PostPurchase';
 
-
   /*
   The form updates accordingly to the events inputted by the user, however, it does several validation checks to avoid problems in the buying process.
   Firstly, all the required data must be inputted for the form to validate the data itself.
@@ -21,9 +20,9 @@ import {
   10 digits as we use in Buenos Aires. 
   */
 
-  const Form = ({setOrderId}) => {    
+  const Form = ({setOrderId, orderId}) => {    
    const { cartList } = useCartContext();
-      
+    
     const handleChange = (event) => {
       setDataForm({
         ...dataForm,
@@ -119,7 +118,8 @@ import {
               validateEmail: "",
             })
           );
-        batch.commit();  
+        batch.commit();
+        //clearCart(); 
       }
     };
 
@@ -132,8 +132,10 @@ import {
   
 return (
   <>
-  {orderId !== undefined  ?   
-(<PostPurchase orderId={orderId} /> ) :  (
+{orderId !== ""  ?   
+
+(<PostPurchase orderId={orderId} /> ) : ( 
+
 <form className="itemListWrapper" onSubmit={buy}>
 <input
   required
@@ -175,8 +177,9 @@ return (
 <button className="btn btn-outline-success btn-block bg-success text-light">Generate order</button>
 <p className="alert" id="alerts"></p>
 </form>
+
 )}
- 
+
 </>
 )
   }
