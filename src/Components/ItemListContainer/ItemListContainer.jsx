@@ -1,7 +1,6 @@
 import React from "react";
 import "./stylesItemListContainer.css";
 import { useEffect, useState } from "react";
-//import { getProducts } from "../helpers/mock";
 import LoadingAnimation from "../LoadingAnimation/LoadingAnimation";
 import ItemList from "../ItemList/ItemList";
 import { useParams } from "react-router-dom";
@@ -33,18 +32,6 @@ const ItemListContainer = () => {
     .then( resp => setProducts( resp.docs.map(prod =>( { id: prod.id, ...prod.data()} ) ) ) )    
     .catch((error)=> console.log(error) )
     .finally(()=> setloading(false) )
-
-
-   /*
-    setloading(true)
-    getProducts()
-    .then((res) =>
-      setProducts(idCategory ? res.filter((prod) => prod.category === idCategory) : res)
-      )
-    .catch((err) => console.log(err))
-    .finally(() =>
-      setloading(false)
-    ); /* along with the upper prop 'loading' mocks a server delay of 3 seconds */
 
 }, [idCategory]); /* So that it detects any change in the filters */ 
 

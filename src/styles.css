@@ -48,3 +48,7 @@
   align-items: center;
   padding: 1%;
 }
+
+.alert {
+  animation-delay: 2s;
+}

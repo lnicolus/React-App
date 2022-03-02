@@ -20,19 +20,6 @@ const ItemDetailContainer = () => {
      .finally(()=> setloading(false))
    }, [idProduct]);
 
-  /*
-  useEffect(() => {
-    getProducts()
-        .then((res) =>{
-          setProduct(res.find((prod) => prod.id === idProduct));
-        })        
-        .catch((err) => console.log(err))
-        .finally(() =>
-          setloading(false)
-        ); 
-    
-  }, [idProduct]); 
-*/
   return (
     <> 
     {loading ? (<LoadingAnimation />) : (<ItemDetail key={product.id} product={product} />)} 

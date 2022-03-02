@@ -7,13 +7,13 @@ import { useState } from 'react';
 
 
 const ItemDetail = (props) => {
-  const { name, category, price, pic, quantity } = props.product; 
+  const { name, category, price, pic } = props.product; 
   const [count, setCount ] = useState(false); 
 
- const { cartList, agregarAlCarrito } = useCartContext()
+ const {  addToCart } = useCartContext()
 
   function onAdd(quantity) {
-    agregarAlCarrito( {...props.product, quantity: quantity, price} ) 
+    addToCart( {...props.product, quantity: quantity, price} ) 
     setCount(true)        
   }
 

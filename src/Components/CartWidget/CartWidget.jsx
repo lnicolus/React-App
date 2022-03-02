@@ -4,7 +4,7 @@ import { useCartContext } from "../../Context/CartContext";
 
 export default function CartWidget() {
   
-  const { cantidad, sumaTotal } = useCartContext()
+  const { quantity, billTotal } = useCartContext()
   return (
     <div className="cart">
       <p className="text-light navText">Cart</p>
@@ -14,11 +14,11 @@ export default function CartWidget() {
           src="https://cdn1.iconfinder.com/data/icons/food-delivery-44/64/Grocery-bag-vegetable-shop-store-food-delivery-256.png"
           alt="buy"
         />
-{ cantidad() !==0 &&  (
+{ quantity() !==0 &&  (
      <>
       <ul className="shoppingStatusDisplay">
-        <li className="text-light navText">{`Kilograms: ${cantidad()}`}</li>
-        <li className="text-light navText">{`Subtotal: ${sumaTotal()}`}</li>
+        <li className="text-light navText">{`Kilograms: ${quantity()}`}</li>
+        <li className="text-light navText">{`Subtotal: ${billTotal()}`}</li>
       </ul>
       </>)     
     
