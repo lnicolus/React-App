@@ -13,14 +13,17 @@ import { Link } from "react-router-dom";
 
 const Cart = () => {
   const [checkout, falseCheckout] = useState(false);
-   
+  const [orderId, setOrderId] = useState("");
   const {
     cartList,
     clearCart,
     billTotal,
     deleteItem,        
-  } = useCartContext();
+  } = useCartContext();  
+  
+  
 
+  console.log(orderId,'cart')
   return (
     <div>
       {cartList.length !== 0 ? (
@@ -55,10 +58,10 @@ const Cart = () => {
               >
                 Empty my cart
               </button>
-              <PostPurchase />  
+              <PostPurchase orderId={orderId} />  
             </div>              
             {checkout ? (
-              <Form />
+              <Form setOrderId={setOrderId} />
             ) : (
               <>
                 <p>Click checkout to confirm your purchase</p>
@@ -75,7 +78,7 @@ const Cart = () => {
               alt="sad cart noises"
             />
           </Link>   
-          <PostPurchase/>               
+          <PostPurchase orderId={orderId} />               
         </div>        
       )}
     </div>

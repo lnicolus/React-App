@@ -13,6 +13,7 @@ import {
   import { useCartContext } from "../../Context/CartContext";  
   import PostPurchase from './../Cart/PostPurchase';
 
+
   /*
   The form updates accordingly to the events inputted by the user, however, it does several validation checks to avoid problems in the buying process.
   Firstly, all the required data must be inputted for the form to validate the data itself.
@@ -20,9 +21,9 @@ import {
   10 digits as we use in Buenos Aires. 
   */
 
-  const Form = () => {
-  const [id, setId] = useState("");  
+  const Form = ({setOrderId}) => {    
    const { cartList } = useCartContext();
+      
     const handleChange = (event) => {
       setDataForm({
         ...dataForm,
@@ -72,7 +73,7 @@ import {
   
         const db = getFirestore();
         const ordersCollection = collection(db, "orders");
-        await addDoc(ordersCollection, order).then((resp) => setId(resp.id));
+        await addDoc(ordersCollection, order).then((resp) => setOrderId(resp.id));
   
         /* 
         The following updates the stock in the Firebase data, we use a filter and a native function (documentID) that brings the ID's in the Cloud Firestore Collection 
@@ -127,15 +128,12 @@ import {
       phone: "",
       name: "",
       validateEmail: "",
-    });
- 
+    }); 
+  
 return (
   <>
-  
-  {id !== ""  ?    
-            (<PostPurchase id={id} /> ) :
-
- (          
+  {orderId !== undefined  ?   
+(<PostPurchase orderId={orderId} /> ) :  (
 <form className="itemListWrapper" onSubmit={buy}>
 <input
   required
@@ -177,7 +175,7 @@ return (
 <button className="btn btn-outline-success btn-block bg-success text-light">Generate order</button>
 <p className="alert" id="alerts"></p>
 </form>
- )}
+)}
  
 </>
 )
