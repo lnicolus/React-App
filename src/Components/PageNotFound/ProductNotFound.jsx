@@ -1,14 +1,14 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-/* Thanks to my Tutor, Juan Martin Cereceda for this component. Its function is to help the user back when the path is badly written.
-It is the basis of the other error pages  */
+// See component PageNotFound.jsx for reference
 
-export const PageNotFound = () => {
+export const ProductNotFound = () => {
   return (
     <div className="storeContainer">
       <div className="center-block border border-danger rounded">
-        <h1>Page not found</h1>
+        <h1>Product does not exist</h1>
+        <p>Try a different ID</p>
 
         <button className="btn bg-success text-light">
           <Link className="text-light" to="/">

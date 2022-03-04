@@ -1,4 +1,4 @@
-.countExercise {
+.count {
   display: flex;
   flex-direction: row;
   padding: 2%;
@@ -10,8 +10,10 @@
   flex-direction: row;
   flex-wrap: nowrap;
   align-items: center;
+  min-height: fit-content;
 }
 
 button {
   margin: 2%;
+  min-width: fit-content;
 }

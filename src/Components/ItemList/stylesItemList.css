@@ -7,6 +7,8 @@
   align-items: center;
   max-width: 85%;
   margin: auto;
+  padding-bottom: 4%;
+  padding-top: 1%;
 }
 
 .itemFlex {
@@ -18,7 +20,7 @@
 
 .cardFooter,
 .buttonContainer,
-.card-body img,
+.card-body,
 .card-footer button {
   margin: auto;
 }
@@ -26,6 +28,8 @@
 .cardFooter {
   padding: 0.5rem 1rem;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   flex-wrap: nowrap;
+  max-width: fit-content;
+  align-items: center;
 }

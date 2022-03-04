@@ -2,24 +2,22 @@ import React from "react";
 import Navbar from "react-bootstrap/Navbar";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
-import Form from "react-bootstrap/Form";
-import FormControl from "react-bootstrap/FormControl";
-import Button from "react-bootstrap/Button";
 import Brand from "../Brand/Brand";
 import CartWidget from "../CartWidget/CartWidget";
 import { Link } from "react-router-dom";
 import "./stylesAppnavbar.css";
+
+/* The present component contains a collapsible navbar that allows access to the corresponding categories of the products; to see all
+ of them as is default or to navigate to the cart through the widget (which displays data of the current state of the purchases) */
 
 export default function Appnavbar() {
   return (
     <div className="headerWrapper">
       <Navbar bg="success" expand="lg">
         <Container>
-                     
-            <Link to="/">
-              <Brand/>
-            </Link>
-       
+          <Link to="/">
+            <Brand />
+          </Link>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto">
@@ -28,22 +26,14 @@ export default function Appnavbar() {
               </Link>
               <Link to="category/vegetables" className="text-light navText">
                 Vegetables
-              </Link>              
+              </Link>
+              <Link to="/" className="text-light navText">
+                All
+              </Link>
             </Nav>
-            <Form className="d-flex">
-              <FormControl
-                type="search"
-                placeholder="Search"
-                className="me-2"
-                aria-label="Search"
-              />
-              <Button variant="dark">Search</Button>
-            </Form>
           </Navbar.Collapse>
           <Link to="/Cart">
-          <CartWidget> 
-            
-          </CartWidget>
+            <CartWidget></CartWidget>
           </Link>
         </Container>
       </Navbar>
