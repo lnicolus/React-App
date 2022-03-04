@@ -1,4 +1,66 @@
-# Getting Started with Create React App
+# Coder Grocery: Final Project for ReactJS course
+
+## The author and his teachers ✒️
+* **Federico Osandón** - *Teacher at CoderHouse* - [federico-osandon] (https://github.com/federico-osandon)
+* **Juan Martín Cereceda** - *Tutor at CoderHouse* - [juancereceda] (https://github.com/juancereceda)
+* **Lucas Nicolussi** - *Student, Author* - [lnicolus] (https://github.com/lnicolus)
+
+## Warning 🛠️
+_None of the image resources used in this project are my own. This site is non-profit and its sole purpose is academic and for showing coding-skills to teachers and potential employers. 
+They belong to their authors._
+
+## Quick Overview 👀
+You may check out a deploy of the SPA in web here :
+You may check the Firestore database here : https://console.firebase.google.com/u/1/project/grocery-ecommerce-c1750/firestore/data/
+
+## Dependencies
+
+#### Development ⌨️
+- **React** : v17.0.2
+    - It supports a collection of reusable JS code snippets useful to the UI building of components. Its responsibity is rendering the components of the present SPA´s view layers. 
+For this project in particular, it not only provided that, but also the component feature has allowed for a more readable, maintainable and reusable code. Just check the sheer quantity
+of components and imagine if all of them where on one JS file!
+
+- **React Router Dom** : v6.2.1
+    - Allows navigation between components by optimized renderization instead of reloading the full site on navigation by handling URL parameters. 
+- **NodeJS**: v16.4.2
+    - Provides the development enviroment for constant testing of errors and functionality by simulating a host.
+- **Prettier Code Formatter** : v9.3.0
+    - It has collaborated inmensely in keeping the code readable for me and for whomever visits this repository. Prettier autoformats the spacing in the code to maximize legibility.
+
+#### Styles
+- **Bootstrap** : v5.1.3
+    - CSS framework that accelerates development time by providing pre-made, intuitive styles and pre-made HTML structures.
+- **React-Bootstrap** : v2.1.0
+    - Replaces the vainilla JS in Bootstrap rebuilding each component without uneeded dependencies such as Jquery. It helps considerable to streamline the development times by making the Bootstrap 
+compatible and specifically designed for the components of this project. I have used button variants, alerts, button, buttons group, card, among others.
+
+#### Backend
+- **Firebase** : v9.6.6
+    - It´s a Google plataform for web and mobile app development that gives Backend as a (free) service. In this project it has provided the request of data to renderize according to what is on the
+database, allowing me to simply change the values in the back-end to see an inmediate result in the front-end and vice-versa. For example if I buy products the stock will be updated in the database,
+if I change the picture of a product, or even add a new one, it will simply appear without the need of hardcoding laboriously.
+
+#### Deployment
+- **Netlify**: https://app.netlify.com/
+   - For ease of use to teachers, tutors, reviewers, colleague students and testers, I´ve deployed the SPA here by recommendation of my teacher. Since Github requires several configurations to deploy
+a project developed in ReactJS and Netlify does not, thus we saved time.
+
+## Briefing of the project
+ I´ve developed a simulation of a grocery (E-Commerce) in SPA format where the user can sort through 2 categories of products and check every individual fruit or vegetable to check a description. In that detailed card
+its possible to choose how many kilograms the user wishes to buy, giving then the option to keep buying or just head to the cart. The cart has a widget that displays current quantity of Kgs selected and the
+total price (kgs*price according to each product). The cart itself details everything about the selected product except the picture, giving also the information on the total of the bill and allowing to delete
+individual items or empty the cart entirely. Once confirmed, a buying form is renderized, where the data is validated to avoid errors, if everything checks out, the order is submitted to the backend, which in
+turn returns an order ID visible to the user.
+
+## How to run this project
+
+Once you download the code, you must install NodeJS (https://nodejs.org/en/) from console using npm install in the highest folder of the master.
+Just access from terminal to the same folder and run "npm start" (without the colons) to begin the development enviroment.
+
+## About ReactJS
+
+## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
@@ -44,27 +106,3 @@ You don't have to ever use `eject`. The curated feature set is suitable for smal
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
 To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
