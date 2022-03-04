@@ -10,7 +10,7 @@ _None of the image resources used in this project are my own. This site is non-p
 They belong to their authors._
 
 ## Quick Overview 👀
-You may check out a deploy of the SPA in web here : https://tender-thompson-24ef66.netlify.app/ 
+You may check out a deploy of the SPA in web here : https://tender-thompson-24ef66.netlify.app/ \
 You may check the Firestore database here : https://console.firebase.google.com/u/1/project/grocery-ecommerce-c1750/firestore/data/
 
 ## Dependencies
@@ -58,7 +58,7 @@ turn returns an order ID visible to the user.
 Once you download the code, you must install NodeJS (https://nodejs.org/en/) from console using npm install in the highest folder of the master.
 Just access from terminal to the same folder and run "npm start" (without the colons) to begin the development enviroment.
 
-## About ReactJS
+# About ReactJS
 
 ## Getting Started with Create React App
 
