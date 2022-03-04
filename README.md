@@ -1,4 +1,4 @@
-# Coder Grocery: Final Project for ReactJS course
+# Coder Grocery: Final Project for ReactJS course at CoderHouse
 
 ## The author and his teachers ✒️
 * **Federico Osandón** - *Teacher at CoderHouse* - [federico-osandon] (https://github.com/federico-osandon)
@@ -10,7 +10,7 @@ _None of the image resources used in this project are my own. This site is non-p
 They belong to their authors._
 
 ## Quick Overview 👀
-You may check out a deploy of the SPA in web here :
+You may check out a deploy of the SPA in web here : https://tender-thompson-24ef66.netlify.app/ 
 You may check the Firestore database here : https://console.firebase.google.com/u/1/project/grocery-ecommerce-c1750/firestore/data/
 
 ## Dependencies
