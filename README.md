@@ -11,7 +11,7 @@ They belong to their authors._
 
 ## Quick Overview 👀
 You may check out a deploy of the SPA in web here : https://tender-thompson-24ef66.netlify.app/ \
-You may check the Firestore database here : https://console.firebase.google.com/u/1/project/grocery-ecommerce-c1750/firestore/data/
+You may check want to check the Firestore database as well here : https://console.firebase.google.com/u/1/project/grocery-ecommerce-c1750/firestore/data/
 
 ## Dependencies
 
@@ -45,6 +45,10 @@ if I change the picture of a product, or even add a new one, it will simply appe
 - **Netlify**: https://app.netlify.com/
    - For ease of use to teachers, tutors, reviewers, colleague students and testers, I´ve deployed the SPA here by recommendation of my teacher. Since Github requires several configurations to deploy
 a project developed in ReactJS and Netlify does not, thus we saved time.
+
+## License
+
+MIT✨
 
 ## Briefing of the project
  I´ve developed a simulation of a grocery (E-Commerce) in SPA format where the user can sort through 2 categories of products and check every individual fruit or vegetable to check a description. In that detailed card

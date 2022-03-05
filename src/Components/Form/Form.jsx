@@ -19,7 +19,7 @@ import { useCartContext } from "../../Context/CartContext";
   10 digits as we use in Buenos Aires. To check out if there are numbers in the string of the name in dataform, I used a RegEx from Starx at 
   https://stackoverflow.com/questions/5778020/check-whether-an-input-string-contains-a-number-in-javascript which resulted nicely, kudos to him.
 
-  The date and everything related to the orders is displayed in the database at https://console.firebase.google.com/u/1/project/grocery-ecommerce-c1750/firestore/data/
+  The date and everything related to the orders is displayed in the database at the Firestore.
   The order is by default generated, since on reload the cart is lost, as no Local Storage session or user authentication is yet implemented. */
 
 const Form = ({ setOrderId }) => {
@@ -125,10 +125,10 @@ const Form = ({ setOrderId }) => {
   };
 
   const [dataForm, setDataForm] = useState({
-    email: "fff@gfgg",
-    phone: "1234567890",
-    name: "Lucas",
-    validateEmail: "fff@gfgg",
+    email: "",
+    phone: "",
+    name: "",
+    validateEmail: "",
   });
 
   return (
