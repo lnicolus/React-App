@@ -12,6 +12,7 @@ They belong to their authors._
 ## Quick Overview 👀
 You may check out a deploy of the SPA in web here : https://tender-thompson-24ef66.netlify.app/ \
 You may check want to check the Firestore database as well here : https://console.firebase.google.com/u/1/project/grocery-ecommerce-c1750/firestore/data/
+Be advised! The API-Key of the Firestore database is available to access the database and its visible in config.js, as it will not be visible to anyone without the keys. Access is free, as this project is non-profit.
 
 ## Dependencies
 
